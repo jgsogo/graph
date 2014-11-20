@@ -1,0 +1,16 @@
+# - Config file for the Core package
+# It defines the following variables
+#  CORE_INCLUDE_DIRS - include directories for Core
+#  CORE_LIBRARIES    - libraries to link against
+#  CORE_EXECUTABLE   - the bar executable
+
+# Compute paths
+get_filename_component(CORE_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+set(CORE_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
+
+# Our library dependencies (contains definitions for IMPORTED targets)
+include("${CORE_CMAKE_DIR}/core-targets.cmake")
+
+# These are IMPORTED targets created by core-targets.cmake
+set(CORE_LIBRARIES architecture comunication draw status_track settings graph)
+#set(FOOBAR_EXECUTABLE bar)

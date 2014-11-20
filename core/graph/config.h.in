@@ -1,0 +1,9 @@
+
+#define GRAPH_MAJOR_VERSION (@CORE_MAJOR_VERSION@)
+#define GRAPH_MINOR_VERSION (@CORE_MINOR_VERSION@)
+#define GRAPH_PATCH_VERSION (@CORE_PATCH_VERSION@)
+#define GRAPH_VERSION_STRING "@CORE_VERSION@"
+
+const std::string app_name = "graph";
+const std::string app_namespace = "core::graph";
+const std::string doc = "graph classes";
