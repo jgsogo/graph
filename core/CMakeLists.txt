@@ -16,22 +16,13 @@ EXPATInstall()
 list(APPEND paths -DEXPAT_ROOT:PATH=${EXPAT_ROOT} -DEXPAT_Version:STRING=${EXPAT_Version})
 
 # Look for xml_parser
-include(../depends/cmake/_install.txt)
+include(../depends/cmake/jgsogo_install.txt)
 set(XML_PARSER_LIBRARIES "xml_parser")
-_Install(xml_parser "${paths}")
+JGSogoInstall(xml_parser "${paths}")
 list(APPEND paths -Dxml_parser_DIR:PATH=${xml_parser_DIR} -Dxml_parser_Version:STRING=${xml_parser_Version})
 
 # For precompiled headers
 include(../depends/cmake/use_precompiled_header2.cmake)
 
 # Add sub-directories
-add_subdirectory(architecture)
-add_subdirectory(comunication)
-add_subdirectory(config)
-add_subdirectory(draw)
-add_subdirectory(factory)
 add_subdirectory(graph)
-add_subdirectory(pattern)
-add_subdirectory(status_track)
-add_subdirectory(utils)
-add_subdirectory(settings)

@@ -2,7 +2,6 @@
 #pragma once
 
 #include "core/graph/graph.h"
-#include "core/utils/str_cast.h"
 #include "visitor_recorder.h"
 
 template <int Behaviour>
@@ -106,7 +105,7 @@ class fixture_graph_base {
             std::vector<valid_visit>::const_iterator it = _valid_visits.begin();
             std::vector<valid_visit>::const_iterator it_end = _valid_visits.end();
             std::map<int, std::string> errors;
-            std::string behaviour = core::utils::to_string(Behaviour);
+            std::string behaviour = std::to_string(static_cast<_ULonglong>(Behaviour));
             
             while( it != it_end) {
                 const valid_visit& valid = *it;

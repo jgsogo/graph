@@ -35,9 +35,6 @@ add_custom_command(TARGET _ALL_TESTS POST_BUILD COMMAND ${CMAKE_CTEST_COMMAND} -
 
 
 # Add all test projects
-add_subdirectory(status_track)
-add_subdirectory(comunication)
-add_subdirectory(settings)
 add_subdirectory(graph)
 
 
